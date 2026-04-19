@@ -5,7 +5,7 @@ import heroBg from '@/assets/hero-bg.png';
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 sm:pt-20 lg:pt-0">
       {/* Background Image */}
       <div
         className="absolute inset-0 opacity-30"
@@ -33,7 +33,7 @@ export const Hero = () => {
       />
 
 
-      <div className="section-container relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      <div className="section-container relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 py-8 lg:py-0">
         {/* Left Column: Text Content */}
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
 
@@ -136,7 +136,7 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="flex-1 flex justify-center lg:justify-end relative"
+          className="flex-1 flex justify-center lg:justify-end relative mt-8 lg:mt-0"
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80">
             {/* Decorative Background Shape */}
@@ -178,12 +178,12 @@ export const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator - Desktop only */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:block"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
