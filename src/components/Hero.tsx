@@ -148,12 +148,6 @@ export const Hero = () => {
               transition={{ duration: 0.3 }}
               className="relative w-full h-full rounded-[2rem] overflow-hidden border-2 border-primary/30 shadow-2xl bg-card/50 backdrop-blur-sm cursor-pointer"
             >
-              {/*
-                TODO: This pulls your GitHub avatar automatically.
-                To use a custom photo instead:
-                  1. Drop a square photo into /public/ (e.g., /public/kashif-avatar.png)
-                  2. Change src below to "/kashif-avatar.png"
-              */}
               <img
                 src="/kashif-avatar1.png"
                 alt="Kashif Muneer"
