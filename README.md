@@ -10,7 +10,7 @@ Personal portfolio website for **Kashif Muneer** — AI/ML Engineer based in Lah
 
 AI/ML Engineer Intern at **AI4LYF**, working on LLMs, agentic AI, and RAG pipelines for healthcare insights. Computer Engineering graduate from **UET Lahore** (2021–2025). Registered Engineer with the Pakistan Engineering Council (PEC).
 
-**Interests:** Applied machine learning, LLMs and RAG systems, computer vision, and embedded AI.
+**Focus areas:** Applied machine learning, Deep Learning, LLMs and retrieval-augmented generation (RAG), computer vision, and Augentic AI.
 
 ---
 
