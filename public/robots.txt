@@ -1,14 +1,11 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# robots.txt for Kashif Muneer Portfolio
+# https://kashifmuneer-portfolio.vercel.app
 
 User-agent: *
 Allow: /
+
+# Block crawling of build artifacts (defensive)
+Disallow: /assets/
+
+# Sitemap location
+Sitemap: https://kashifmuneer-portfolio.vercel.app/sitemap.xml
