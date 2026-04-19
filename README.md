@@ -1,8 +1,16 @@
 # Kashif Muneer — Portfolio
 
-AI/ML Engineer portfolio. Built with React + TypeScript + Tailwind + shadcn/ui + Framer Motion.
+Personal portfolio website for **Kashif Muneer** — AI/ML Engineer based in Lahore, Pakistan.
 
-**Forked and customized from** the excellent open-source portfolio by [Dinesh Barri](https://github.com/dineshbarri/dineshbarri-portfolio). All original structural work credited to the source project.
+🌐 **Live site:** [kashifmuneer-portfolio.vercel.app](https://kashifmuneer-portfolio.vercel.app)
+
+---
+
+## About me
+
+AI/ML Engineer Intern at **AI4LYF**, working on LLMs, agentic AI, and RAG pipelines for healthcare insights. Computer Engineering graduate from **UET Lahore** (2021–2025). Registered Engineer with the Pakistan Engineering Council (PEC).
+
+**Interests:** Applied machine learning, LLMs and RAG systems, computer vision, and embedded AI.
 
 ---
 
@@ -10,105 +18,102 @@ AI/ML Engineer portfolio. Built with React + TypeScript + Tailwind + shadcn/ui +
 
 - **Framework:** React 18 + Vite 5
 - **Language:** TypeScript
-- **Styling:** Tailwind CSS + shadcn/ui primitives
+- **Styling:** Tailwind CSS + shadcn/ui
 - **Animation:** Framer Motion
 - **Contact form:** EmailJS
-- **Icons:** Lucide React + React Icons
+- **Icons:** Lucide React
+
+---
+
+## Featured projects
+
+| Project | Description | Stack |
+|---|---|---|
+| **Pakistan Law Assistant** | RAG-powered legal chatbot grounded in official Pakistani law (Constitution, PPC, PECA, NADRA). Hybrid retrieval with FAISS + BM25, Groq-hosted Llama 3.3 70B. Bilingual (English + Urdu). | LangChain, FAISS, BM25, Groq, Streamlit |
+| **Review Intelligence** | NLP dashboard that scrapes app reviews, clusters them by theme using sentence-transformer embeddings, and labels clusters with TF-IDF keywords. | scikit-learn, Sentence Transformers, Streamlit |
+| **Autonomous Research Agent** | Multi-agent AI system that researches any topic end-to-end and generates structured 1,000–1,200 word reports. | LangGraph, Groq, Llama 3.3 70B, FastAPI |
+| **Ghar Ka Hisaab** | Cross-platform household expense tracker with AI-powered receipt parsing (Roman Urdu + English) and push notifications. | React Native, Expo, Groq, Apps Script |
+| **Smart Fire Extinguisher (FYP)** | Computer-vision-based fire detection with automated suppression — final-year project. | YOLO, OpenCV, Hardware Integration |
 
 ---
 
 ## Run locally
 
+### Requirements
+
+- Node.js 18+ (Node 22 recommended)
+- npm
+
+### Setup
+
 ```bash
+# Clone the repo
+git clone https://github.com/kashifmuneer1085/kashifmuneer-portfolio.git
+cd kashifmuneer-portfolio
+
+# Install dependencies
 npm install
+
+# Start dev server
 npm run dev
 ```
 
-Opens at `http://localhost:5173`.
-
-### Requirements
-
-- Node.js 18+ (Node 22 recommended, Node 24 works fine)
-- npm (or bun — `bun.lockb` is in the repo from upstream)
+Opens at `http://localhost:8080`.
 
 ---
 
-## Before deploying — things to set up
+## Project structure
 
-### 1. EmailJS (for contact form)
-
-The contact form currently has placeholder EmailJS credentials. To make it work:
-
-1. Sign up at [emailjs.com](https://www.emailjs.com) (free tier)
-2. Add an email service (Gmail works well) → copy **Service ID**
-3. Create a template with variables: `from_name`, `from_email`, `subject`, `message` → copy **Template ID**
-4. Account → API Keys → copy **Public Key**
-5. Open `src/components/Contact.tsx` (around line 20) and replace:
-   - `YOUR_SERVICE_ID` → your Service ID
-   - `YOUR_TEMPLATE_ID` → your Template ID
-   - `YOUR_PUBLIC_KEY` → your Public Key
-
-### 2. Your photo (optional)
-
-The Hero pulls from `https://github.com/kashifmuneer1085.png` (GitHub avatar). If you want a custom photo instead:
-
-- Drop a square photo into `/public/` (e.g., `/public/kashif-avatar.png`)
-- In `src/components/Hero.tsx`, change the `<img src="..." />` in the profile card to `"/kashif-avatar.png"`
-
-### 3. Project preview images
-
-The `projects` array in `src/components/Projects.tsx` references `/project-fire.png`, `/project-language.png`, `/project-airquality.png`, `/project-jarvis.png`. These files don't exist yet — you need to create them:
-
-- **Easiest:** screenshot of the project in action
-- **Cleaner:** generate a themed 1200x630 card using Canva/Figma with the project name and key tech tags
-- **Fallback:** the `placeholder.svg` that's already in `/public/` — temporarily edit project objects to use `/placeholder.svg`
-
-### 4. Company logos (for Experience section)
-
-`src/components/Experience.tsx` references `/ai4lyf.png` and `/xavor.png`. Drop those logo files into `/public/` or temporarily use `/placeholder.svg`.
-
----
-
-## Content structure
-
-All content lives **inline in component files** (not in a separate constants file — keeps things simple):
-
-| File | What to edit |
-|---|---|
-| `src/components/Hero.tsx` | Name, TypeWriter words, bio, social URLs |
-| `src/components/About.tsx` | Bio paragraphs + 6 highlight cards |
-| `src/components/Skills.tsx` | 7 skill categories (`skillCategories` array) |
-| `src/components/Experience.tsx` | Jobs (`experiences` array) |
-| `src/components/Projects.tsx` | Projects (`projects` array) + categories |
-| `src/components/Education.tsx` | Degrees (`educationData` array) |
-| `src/components/Contact.tsx` | Email, phone, location, EmailJS creds |
-| `src/components/Footer.tsx` | Social links + tagline |
-| `public/Certifications.csv` | Certifications (data-driven, edit CSV directly) |
-| `src/components/Certifications.tsx` | Description + logo mapping for each cert |
-| `index.html` | SEO meta tags + JSON-LD schema |
-| `src/pages/Index.tsx` | Page title |
-
----
-
-## Deploy to Vercel
-
-```bash
-# One-time setup
-npm i -g vercel
-vercel login
-
-# Deploy
-vercel --prod
+```
+kashifmuneer-portfolio/
+├── public/                    # Static assets (avatar, logos, resume PDF, favicon)
+│   ├── avatar.png
+│   ├── favicon.svg
+│   ├── Kashif_Muneer_Resume.pdf
+│   ├── Certifications.csv
+│   └── logos/                 # Company and certification logos
+├── src/
+│   ├── components/            # React components — all section content lives here
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Education.tsx
+│   │   ├── Certifications.tsx
+│   │   ├── Contact.tsx
+│   │   └── Footer.tsx
+│   ├── pages/
+│   │   └── Index.tsx          # Main page
+│   └── main.tsx               # Entry point
+├── index.html                 # SEO meta tags + JSON-LD schema
+├── package.json
+├── tailwind.config.ts
+└── vite.config.ts
 ```
 
-Or: push this repo to GitHub, then Import Project on [vercel.com/new](https://vercel.com/new) — Vercel auto-detects Vite and deploys.
-
-**Don't forget** to re-do the Vercel domain in `index.html` canonical/OG tags and in the `JSON-LD schema` once you know your deployed URL.
+All section content lives inline in its component file — no separate constants file. Edit a section by opening the matching `.tsx` file in `src/components/`.
 
 ---
 
-## Credits
+## Deployment
 
-- Original template: [Dinesh Barri](https://github.com/dineshbarri) — `dineshbarri-portfolio`
-- UI components: [shadcn/ui](https://ui.shadcn.com)
-- Icons: [Lucide](https://lucide.dev) + [React Icons](https://react-icons.github.io)
+The site is deployed on **Vercel** with auto-deploy on every push to `main`.
+
+To deploy your own fork:
+
+1. Push to a GitHub repo
+2. Import the repo at [vercel.com/new](https://vercel.com/new)
+3. Vercel auto-detects Vite and deploys
+
+---
+
+## Contact
+
+- **Email:** kashifmuneer1085@gmail.com
+- **LinkedIn:** [linkedin.com/in/kashif-muneer-4a641b22b](https://www.linkedin.com/in/kashif-muneer-4a641b22b/)
+- **GitHub:** [@kashifmuneer1085](https://github.com/kashifmuneer1085)
+
+---
+
+© 2026 Kashif Muneer. All rights reserved.
