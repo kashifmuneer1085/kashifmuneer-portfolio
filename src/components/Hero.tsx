@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail, Download, CheckCircle2 } from 'lucide-react';
+import { FaWhatsapp, FaXTwitter } from 'react-icons/fa6';
 import { TypeWriter } from './TypeWriter';
 import heroBg from '@/assets/hero-bg.png';
 
@@ -84,16 +85,22 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex gap-4 mb-6"
+            className="flex flex-wrap gap-4 mb-6 justify-center lg:justify-start"
           >
-            <a href="https://github.com/kashifmuneer1085" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://github.com/kashifmuneer1085" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/kashif-muneer-4a641b22b/" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://www.linkedin.com/in/kashif-muneer-4a641b22b/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
               <Linkedin size={20} />
             </a>
-            <a href="mailto:kashifmuneer1085@gmail.com" className="social-icon">
+            <a href="mailto:kashifmuneer1085@gmail.com" className="social-icon" aria-label="Email">
               <Mail size={20} />
+            </a>
+            <a href="https://wa.me/923447513564" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WhatsApp">
+              <FaWhatsapp size={20} />
+            </a>
+            <a href="https://x.com/KashifMune61139" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="X (Twitter)">
+              <FaXTwitter size={20} />
             </a>
           </motion.div>
 

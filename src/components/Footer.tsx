@@ -1,11 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-deprecated
 import { Github, Linkedin, Mail } from 'lucide-react';
-
-const socialLinks = [
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/kashif-muneer-4a641b22b/', label: 'LinkedIn' },
-  { icon: Github, href: 'https://github.com/kashifmuneer1085', label: 'GitHub' },
-  { icon: Mail, href: 'mailto:kashifmuneer1085@gmail.com', label: 'Email' },
-];
+import { FaWhatsapp, FaXTwitter } from 'react-icons/fa6';
 
 export const Footer = () => {
   return (
@@ -20,18 +15,56 @@ export const Footer = () => {
 
           {/* Social Links */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-                title={link.label}
-              >
-                <link.icon size={18} />
-              </a>
-            ))}
+            <a
+              href="https://www.linkedin.com/in/kashif-muneer-4a641b22b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+              title="LinkedIn"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={18} />
+            </a>
+            <a
+              href="https://github.com/kashifmuneer1085"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+              title="GitHub"
+              aria-label="GitHub"
+            >
+              <Github size={18} />
+            </a>
+            <a
+              href="mailto:kashifmuneer1085@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+              title="Email"
+              aria-label="Email"
+            >
+              <Mail size={18} />
+            </a>
+            <a
+              href="https://wa.me/923447513564"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+              title="WhatsApp"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp size={18} />
+            </a>
+            <a
+              href="https://x.com/KashifMune61139"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+              title="X (Twitter)"
+              aria-label="X (Twitter)"
+            >
+              <FaXTwitter size={18} />
+            </a>
           </div>
 
           {/* Navigation */}

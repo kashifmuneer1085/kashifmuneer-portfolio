@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Mail, Send, MapPin, Linkedin, Github, Phone } from 'lucide-react';
+import { FaWhatsapp, FaXTwitter } from 'react-icons/fa6';
 import { toast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
 
@@ -15,16 +16,11 @@ export const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // TODO: Replace these three values with your own from https://www.emailjs.com
-      //   1. Sign up at emailjs.com
-      //   2. Add an email service (Gmail) → copy Service ID
-      //   3. Create template with vars: from_name, from_email, subject, message → copy Template ID
-      //   4. Account → API Keys → copy Public Key
       const result = await emailjs.sendForm(
-        'service_iq79dxt',     // ← NEW Service ID
-        'template_f5mjvjf',      // Template ID ← UPDATED
+        'service_iq79dxt',
+        'template_f5mjvjf',
         e.currentTarget,
-        'B7f8ecOBH2PgE9M_y'   // Public Key (unchanged)
+        'B7f8ecOBH2PgE9M_y'
       );
 
       if (result.text === 'OK') {
@@ -102,6 +98,21 @@ export const Contact = () => {
                 </div>
               </a>
 
+              <a
+                href="https://wa.me/923447513564"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 glass-card p-4 hover:border-primary/30 transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <FaWhatsapp className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">WhatsApp</p>
+                  <p className="font-medium group-hover:text-primary transition-colors">Message me directly</p>
+                </div>
+              </a>
+
               <div className="flex items-center gap-4 glass-card p-4">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-primary" />
@@ -116,15 +127,21 @@ export const Contact = () => {
             {/* Social Links */}
             <div className="mt-8">
               <p className="text-sm text-muted-foreground mb-4">Connect on social media</p>
-              <div className="flex gap-3">
-                <a href="https://www.linkedin.com/in/kashif-muneer-4a641b22b/" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <div className="flex flex-wrap gap-3">
+                <a href="https://www.linkedin.com/in/kashif-muneer-4a641b22b/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
                   <Linkedin size={20} />
                 </a>
-                <a href="https://github.com/kashifmuneer1085" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://github.com/kashifmuneer1085" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
                   <Github size={20} />
                 </a>
-                <a href="mailto:kashifmuneer1085@gmail.com" className="social-icon">
+                <a href="mailto:kashifmuneer1085@gmail.com" className="social-icon" aria-label="Email">
                   <Mail size={20} />
+                </a>
+                <a href="https://wa.me/923447513564" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WhatsApp">
+                  <FaWhatsapp size={20} />
+                </a>
+                <a href="https://x.com/KashifMune61139" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="X (Twitter)">
+                  <FaXTwitter size={20} />
                 </a>
               </div>
             </div>
