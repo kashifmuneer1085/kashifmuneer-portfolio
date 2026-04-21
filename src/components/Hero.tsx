@@ -60,9 +60,9 @@ export const Hero = () => {
             <TypeWriter
               words={[
                 'AI/ML Engineer',
+                'Deep Learning Practitioner',
                 'LLM & RAG Developer',
                 'Computer Vision Enthusiast',
-                'Deep Learning Practitioner',
                 'Problem Solver'
               ]}
               className="text-primary font-semibold"
@@ -77,7 +77,7 @@ export const Hero = () => {
           >
             Based in Lahore, Pakistan 🇵🇰.
             <br /><br />
-            I build intelligent systems — ML pipelines, LLM-powered applications, and computer-vision solutions. Currently an AI Engineer Intern at AI4LYF, working on LLMs, agentic AI, and RAG for healthcare insights. Computer Engineering graduate from UET Lahore.
+            I build intelligent systems — production deep learning pipelines, LLM-powered applications, and computer-vision solutions. Currently an AI Engineer Intern at AI4LYF, designing and validating biometric authentication models from audio. Computer Engineering graduate from UET Lahore.
           </motion.p>
 
           {/* Social Links */}
