@@ -11,24 +11,27 @@ const experiences = [
     period: 'Dec 2025 – Present',
     location: 'Remote',
     description:
-      'Developing and optimizing machine learning, deep learning, and NLP models for analyzing multi-modal health data. Working at the intersection of applied research and production ML.',
+      'Designing and validating production deep learning systems for biometric authentication from audio. Built a cough-based identity verification pipeline achieving 1.7% EER and 94.6% accuracy on blind-test evaluation — outperforming published reference baselines.',
     achievements: [
-      'Developing and optimizing machine learning, deep learning, and NLP models for analyzing multi-modal health data.',
-      'Working with LLMs and Agentic AI frameworks to build intelligent systems for healthcare insights and decision support.',
-      'Designing data pipelines for preprocessing and managing large-scale environmental, behavioral, and textual datasets.',
-      'Collaborating with global AI experts to explore prompt engineering, LLM fine-tuning, and retrieval-augmented generation (RAG).',
+      'Designed and validated a cough-based biometric verification pipeline for per-user identity authentication from cough acoustics: enrollment-and-verification workflow with real-world blind-test evaluation; achieved 1.7% EER and 94.6% verification accuracy on a held-out test set — outperforming published reference baselines on standard biometric metrics.',
+      'Integrated the personalized verification stage with the existing on-device cough detection pipeline into a unified two-stage acoustic processing system; modular stage handoff with independent deployability, enabling cough-type classification and per-user identity verification from a single audio stream.',
+      'Built an internal-testing web app for the verification workflow: enrollment and verification from consumer-hardware microphones, automated blind-test runner, per-session Excel result logging, and microphone device selection — used internally by the team for blind-test evaluation.',
+      'Driving on-device readiness for the verification stage toward iOS handoff: mobile-format model export, inference-path profiling, and footprint alignment with the production classification system — supporting personalization integration with the iOS dev team through model handoff and on-device validation.',
     ],
     technologies: [
       'Python',
       'PyTorch',
       'TensorFlow',
-      'Hugging Face',
-      'LangChain',
-      'RAG',
-      'Agentic AI',
-      'Prompt Engineering',
-      'LLM Fine-tuning',
-      'Data Pipelines',
+      'Deep Learning',
+      'Audio Processing',
+      'Biometric Authentication',
+      'Triplet/Metric Learning',
+      'ResNet',
+      'Mel Spectrograms',
+      'Librosa',
+      'Streamlit',
+      'On-Device ML',
+      'iOS Model Export',
     ],
   },
   {
@@ -128,6 +131,7 @@ export const Experience = () => {
                                 src={exp.image}
                                 alt={exp.company}
                                 className="w-full h-full object-contain p-0"
+                                loading="lazy"
                               />
                             ) : null}
                           </div>
