@@ -158,6 +158,9 @@ export const Hero = () => {
               <img
                 src="/kashif-avatar1.png"
                 alt="Kashif Muneer"
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               />
 
