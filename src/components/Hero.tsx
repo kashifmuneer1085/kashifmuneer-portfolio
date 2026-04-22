@@ -6,7 +6,7 @@ import heroBg from '@/assets/hero-bg.png';
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 sm:pt-20 lg:pt-0">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-28 sm:pt-24 lg:pt-24 xl:pt-20">
       {/* Background Image */}
       <div
         className="absolute inset-0 opacity-30"
@@ -34,7 +34,7 @@ export const Hero = () => {
       />
 
 
-      <div className="section-container relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 py-8 lg:py-0">
+      <div className="section-container relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 py-8 lg:py-12">
         {/* Left Column: Text Content */}
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
 
